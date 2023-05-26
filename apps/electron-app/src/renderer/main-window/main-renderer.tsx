@@ -7,9 +7,8 @@ import "rsuite/dist/rsuite.min.css";
 import "@/styles/global.css";
 import "@/styles/colors.css";
 
-import { useWindow } from "./stores/window-store";
-
-import { router } from "@/router/router";
+import { router } from "@/main-window/router/router";
+import { useWindow } from "@/stores/window-store";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
