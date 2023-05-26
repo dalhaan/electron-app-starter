@@ -3,6 +3,7 @@
   "include": [
     "./apps/electron-app/src/renderer/**/*.ts",
     "./apps/electron-app/src/renderer/**/*.tsx",
+    "./apps/electron-app/src/common/**/*.ts",
     "./apps/electron-app/package.json",
     "./lib/common/**/*.ts"
   ],

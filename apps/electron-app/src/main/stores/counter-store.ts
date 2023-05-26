@@ -1,3 +1,5 @@
+import { COUNTER_STORE_NAME } from "../../common/store-names";
+
 import { Store, StoreOptions } from "./store";
 
 class CounterStore extends Store<{
@@ -9,7 +11,7 @@ class CounterStore extends Store<{
         count: 0,
       },
       {
-        name: "counter",
+        name: COUNTER_STORE_NAME,
         ...options,
       }
     );
