@@ -4,6 +4,8 @@ import { BrowserWindow, nativeTheme } from "electron";
 
 import { colors } from "../common/colors";
 
+import { counterStore } from "./stores/counter-store";
+
 export const createMainWindow = () => {
   const lightThemeBackground = "white";
   const darkThemeBackground = colors.almostBlack;
@@ -73,11 +75,15 @@ export const createMainWindow = () => {
   });
 
   // Save reference to webContents to prevent it from being lost when it is destroyed
-  // const mainWindowWebContents = mainWindow.webContents;
+  const mainWindowWebContents = mainWindow.webContents;
 
-  // Remove LibraryStore listener on close
+  // Clean up listeners on window close
+  // All stores that are used need to remove their listeners here
   mainWindow.webContents.on("destroyed", () => {
-    // libraryStore.removeListener(mainWindowWebContents);
+    // Remove all store listeners
+    counterStore.removeListener(mainWindowWebContents);
+
+    // Remove theme change listener
     nativeTheme.off("updated", updateTheme);
   });
 

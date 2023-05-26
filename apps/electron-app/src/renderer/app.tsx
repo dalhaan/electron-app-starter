@@ -5,7 +5,7 @@ import { CustomProvider } from "rsuite";
 
 import { AppContainer } from "@/components/layout/app-container";
 import { TitleBar } from "@/components/layout/title-bar";
-import { useWindow } from "@/stores/windowStore";
+import { useWindow } from "@/stores/window-store";
 import * as styles from "@/styles/app.css";
 import { MEDIA } from "@/styles/media";
 import { darkTheme } from "@/styles/themes/darkTheme.css";

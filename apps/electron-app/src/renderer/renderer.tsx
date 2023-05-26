@@ -7,7 +7,7 @@ import "rsuite/dist/rsuite.min.css";
 import "@/styles/global.css";
 import "@/styles/colors.css";
 
-import { useWindow } from "./stores/windowStore";
+import { useWindow } from "./stores/window-store";
 
 import { router } from "@/router/router";
 
