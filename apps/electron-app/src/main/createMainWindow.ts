@@ -2,8 +2,7 @@ import path from "path";
 
 import { BrowserWindow, nativeTheme } from "electron";
 
-import { counterStore } from "./stores/counter-store";
-
+import { counterStore } from "@/stores/counter-store";
 import { colors } from "~/common/colors";
 
 export const createMainWindow = () => {

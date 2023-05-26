@@ -2,9 +2,9 @@ import { EXAMPLE_COMMON_VARIABLE } from "@org-name/common";
 import { EXAMPLE_MAIN_VARIABLE } from "@org-name/node";
 import { app, BrowserWindow, ipcMain } from "electron";
 
-import { createMainWindow } from "./createMainWindow";
-import { createSecondWindow } from "./createSecondWindow";
-import { initIpcHandlers } from "./ipc";
+import { createMainWindow } from "@/createMainWindow";
+import { createSecondWindow } from "@/createSecondWindow";
+import { initIpcHandlers } from "@/ipc";
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
