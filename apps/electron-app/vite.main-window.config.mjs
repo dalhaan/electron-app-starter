@@ -15,7 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src/renderer"),
-      "~": path.resolve(__dirname, "src"),
+      "~/common": path.resolve(__dirname, "src/common"),
       "@org-name/common": path.resolve(
         __dirname,
         "../../lib/common/src/index.ts"
