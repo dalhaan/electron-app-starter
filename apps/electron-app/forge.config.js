@@ -44,6 +44,10 @@ const config = {
             name: "main_window",
             config: "vite.main-window.config.mjs",
           },
+          {
+            name: "second_window",
+            config: "vite.second-window.config.mjs",
+          },
         ],
       },
     },

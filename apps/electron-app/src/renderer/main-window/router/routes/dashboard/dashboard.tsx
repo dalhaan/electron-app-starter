@@ -1,4 +1,4 @@
-import { Button } from "rsuite";
+import { Button, ButtonToolbar } from "rsuite";
 
 import { useCounter } from "@/stores/counter-store";
 
@@ -8,13 +8,22 @@ export const Dashboard = () => {
   return (
     <div>
       <h1>Main window</h1>
-      <Button
-        onClick={() => {
-          useCounter.getState().increment();
-        }}
-      >
-        Count: {count}
-      </Button>
+      <ButtonToolbar>
+        <Button
+          onClick={() => {
+            window.electronAPI.openSecondWindow();
+          }}
+        >
+          Open second window
+        </Button>
+        <Button
+          onClick={() => {
+            useCounter.getState().increment();
+          }}
+        >
+          Count: {count}
+        </Button>
+      </ButtonToolbar>
     </div>
   );
 };

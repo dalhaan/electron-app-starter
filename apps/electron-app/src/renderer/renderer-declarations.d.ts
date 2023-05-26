@@ -4,6 +4,9 @@ declare global {
   interface Window {
     electronAPI: // IPC invoke handler types
     IpcHandlers & {
+      // Window events
+      openSecondWindow: () => void;
+
       // IPC one-way listener types
       getStore: (name: string) => void;
       onStoreChange: (name: string, callback: (state: any) => void) => void;

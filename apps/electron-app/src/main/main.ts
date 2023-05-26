@@ -1,6 +1,7 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 
 import { createMainWindow } from "./createMainWindow";
+import { createSecondWindow } from "./createSecondWindow";
 import { initIpcHandlers } from "./ipc";
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -15,6 +16,12 @@ app.on("ready", async () => {
   initIpcHandlers();
 
   const mainWindow = createMainWindow();
+
+  // Open window event handlers
+
+  ipcMain.on("OPEN_SECOND_WINDOW", async () => {
+    const secondWindow = await createSecondWindow(mainWindow);
+  });
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common

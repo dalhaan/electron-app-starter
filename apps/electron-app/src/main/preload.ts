@@ -1,6 +1,11 @@
 import { contextBridge, ipcRenderer } from "electron";
 
 contextBridge.exposeInMainWorld("electronAPI", {
+  // Window events
+  openSecondWindow: () => {
+    ipcRenderer.send("OPEN_SECOND_WINDOW");
+  },
+
   // IPC one-way functions
   getStore: (name: string) => {
     ipcRenderer.send(`SYNCSTORE:${name}:GET`);
