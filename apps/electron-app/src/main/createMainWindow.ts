@@ -2,9 +2,9 @@ import path from "path";
 
 import { BrowserWindow, nativeTheme } from "electron";
 
-import { colors } from "../common/colors";
-
 import { counterStore } from "./stores/counter-store";
+
+import { colors } from "~/common/colors";
 
 export const createMainWindow = () => {
   const lightThemeBackground = "white";

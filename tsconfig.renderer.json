@@ -13,6 +13,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./apps/electron-app/src/renderer/*"],
+      "~/*": ["./apps/electron-app/src/*"],
       "@org-name/common": ["./lib/common/src/index.ts"]
     },
     "allowJs": true,

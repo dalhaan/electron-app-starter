@@ -11,6 +11,7 @@
     "composite": true,
     "paths": {
       "@/*": ["./apps/electron-app/src/main/*"],
+      "~/*": ["./apps/electron-app/src/*"],
       "@org-name/common": ["./lib/common/src/index.ts"],
       "@org-name/node": ["./lib/node/src/index.ts"]
     }

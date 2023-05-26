@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { COUNTER_STORE_NAME } from "../../common/store-names";
+import { COUNTER_STORE_NAME } from "~/common/store-names";
 
 export const useCounter = create<{
   count: number;

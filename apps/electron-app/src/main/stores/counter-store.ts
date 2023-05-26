@@ -1,6 +1,6 @@
-import { COUNTER_STORE_NAME } from "../../common/store-names";
-
 import { Store, StoreOptions } from "./store";
+
+import { COUNTER_STORE_NAME } from "~/common/store-names";
 
 class CounterStore extends Store<{
   count: number;
