@@ -1,3 +1,4 @@
+import { EXAMPLE_COMMON_VARIABLE } from "@org-name/common";
 import { Button, ButtonToolbar } from "rsuite";
 
 import { useCounter } from "@/stores/counter-store";
@@ -24,6 +25,7 @@ export const Dashboard = () => {
           Count: {count}
         </Button>
       </ButtonToolbar>
+      <p>{EXAMPLE_COMMON_VARIABLE}</p>
     </div>
   );
 };

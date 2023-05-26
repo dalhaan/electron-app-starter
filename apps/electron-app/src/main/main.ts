@@ -1,3 +1,5 @@
+import { EXAMPLE_COMMON_VARIABLE } from "@org-name/common";
+import { EXAMPLE_MAIN_VARIABLE } from "@org-name/node";
 import { app, BrowserWindow, ipcMain } from "electron";
 
 import { createMainWindow } from "./createMainWindow";
@@ -14,6 +16,9 @@ if (require("electron-squirrel-startup")) {
 // Some APIs can only be used after this event occurs.
 app.on("ready", async () => {
   initIpcHandlers();
+
+  console.log("Example @org-node/node variable", EXAMPLE_MAIN_VARIABLE);
+  console.log("Example @org-node/common variable", EXAMPLE_COMMON_VARIABLE);
 
   const mainWindow = createMainWindow();
 

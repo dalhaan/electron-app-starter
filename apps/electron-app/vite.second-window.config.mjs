@@ -15,7 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "src/renderer"),
-      "@dj-migrator/common": resolve(
+      "@org-name/common": path.resolve(
         __dirname,
         "../../lib/common/src/index.ts"
       ),
